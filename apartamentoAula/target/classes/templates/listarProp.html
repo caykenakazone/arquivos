@@ -1,0 +1,24 @@
+<html th:include="template :: modelo">
+<div th:fragment="conteudo">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nome do propietário</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">Id Propietario</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="propietario : ${propietarios}">
+                <td scope="row" th:text="${propietario.nome}"></td>
+                <td scope="row" th:text="${propietario.telefone}"></td>
+                <th scope="row" th:text="${propietario.idProp}"></th>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+</html>

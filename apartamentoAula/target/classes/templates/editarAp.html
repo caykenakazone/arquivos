@@ -1,0 +1,26 @@
+<html th:include="template :: modelo">
+<div th:fragment="conteudo">
+    <form action="/gravaapartamentoeditado" method="post" th:object="${apartamentoEditado}">
+        <div class="mb-3">
+            <input type="hidden" th:field="*{id}">
+            <label for="numPortas" class="form-label">Número de Portas</label>
+            <input type="text" class="form-control" th:field="*{numPortas}">
+        </div>
+        <div class="mb-3">
+            <label for="qtdQuartos" class="form-label">Quantidade de quartos</label>
+            <input type="text" class="form-control" th:field="*{qtdQuartos}">
+        </div>
+        <div class="mb-3">
+            <label for="tipo" class="form-label">Tipo</label>
+            <input type="text" class="form-control" th:field="*{tipo}">
+        </div>
+        <div class="mb-3">
+            <label for="propietario" class="form-label">Propietário</label>
+            <input type="text" class="form-control" th:field="*{propietario}">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Alterar</button>
+    </form>
+</div>
+
+</html>

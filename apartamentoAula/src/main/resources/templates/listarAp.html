@@ -1,0 +1,31 @@
+<html th:include="template :: modelo">
+<div th:fragment="conteudo">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Home</th>
+                <th scope="col">Número de portas</th>
+                <th scope="col">Quantidade de quartos</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Proprietário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each=" apartamento : ${apartamentos}">
+                <th scope="row" th:text="${apartamento.id"></th>
+                <td scope="row" th:text="${apartamento.numPortas"></td>
+                <td scope="row" th:text="${apartamento.qtdQuartos"></td>
+                <td scope="row" th:text="${apartamento.tipo"></td>
+                <td scope="row" th:text="${apartamento.propietario"></td>
+                <td>
+                    <a th:href="@{/excluirAp(id=${apartamento.id})}">Excluir</a>
+                    <a th:href="@{/editarAp(id=${apartamento.id})}">Editar</a>
+
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+</html>
